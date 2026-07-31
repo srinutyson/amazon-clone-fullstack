@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Sign Up</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/signup.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="signup-container">
+
+    <img class="logo" src="images/amazon-logo.png">
+
+    <div class="signup-box">
+
+        <h1>Create account</h1>
+
+        <label>Your name</label>
+        <input
+            id="name"
+            type="text"
+            placeholder="First and last name">
+
+        <label>Email</label>
+        <input
+            id="email"
+            type="email"
+            placeholder="Enter email">
+
+        <label>Password</label>
+        <input
+            id="password"
+            type="password"
+            placeholder="At least 6 characters">
+
+        <button
+            id="signup-btn"
+            class="signup-button">
+            Create your Amazon account
+        </button>
+
+        <p class="error-message" id="error-message"></p>
+
+        <hr>
+
+        <p>
+            Already have an account?
+            <a href="login.html">Sign in</a>
+        </p>
+
+    </div>
+
+</div>
+
+<script type="module" src="scripts/signup.js"></script>
+
+</body>
+</html>

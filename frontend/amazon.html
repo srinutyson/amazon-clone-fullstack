@@ -27,7 +27,7 @@
           <img class="amazon-mobile-logo"
             src="images/amazon-mobile-logo-white.png">
         </a>
-      </div>
+       </div>
 
       <div class="amazon-header-middle-section">
         <input class="search-bar" type="text" placeholder="Search">
@@ -37,22 +37,27 @@
         </button>
       </div>
 
-      <div class="amazon-header-right-section">
-        <a class="orders-link header-link" href="orders.html">
-          <span class="returns-text">Returns</span>
-          <span class="orders-text">& Orders</span>
-        </a>
+    <div class="amazon-header-right-section">
+  <a class="orders-link header-link" href="orders.html">
+    <span class="returns-text">Returns</span>
+    <span class="orders-text">& Orders</span>
+  </a>
 
-        <a class="cart-link header-link" href="checkout.html">
-          <img class="cart-icon" src="images/icons/cart-icon.png">
-          <div class="cart-quantity">3</div>
-          <div class="cart-text">Cart</div>
-        </a>
-      </div>
+  <a class="cart-link header-link" href="checkout.html">
+    <img class="cart-icon" src="images/icons/cart-icon.png">
+    <div class="cart-quantity js-cquantity">0</div>
+    <div class="cart-text">Cart</div>
+  </a>
+
+  <a class="logout-link header-link" href="javascript:void(0)">
+  <span class="logout-small">Signed In</span>
+  <span class="logout-large">Logout</span>
+</a>
+</div>
     </div>
     
     <div class="main">
-      <div class="products-grid">
+      <div class="products-grid  js-product-grid">
         <div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
@@ -201,8 +206,9 @@
         </div>
       </div>
     </div>
-    <button>
-      lanja
-    </button>
+    
+    <script type = "module"src = "data/products.js"></script>
+    <script  type = "module" src = "scripts/amazon.js"></script>
+
   </body>
 </html>

@@ -1,7 +1,7 @@
 export async function checkAuth() {
 
     const response = await fetch(
-        "http://localhost:3069/api/profile",
+        "https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/profile",
         {
             credentials: "include"
         }

@@ -19,7 +19,7 @@ async function signup() {
     try {
 
         const response = await fetch(
-            "http://localhost:3069/api/signup",
+            "https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/signup",
             {
                 method: "POST",
                 credentials: "include",

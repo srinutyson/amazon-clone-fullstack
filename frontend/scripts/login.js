@@ -10,7 +10,7 @@ async function login() {
     try {
 
         const response = await fetch(
-            "http://localhost:3069/api/login",
+            "https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/login",
             {
                 method: "POST",
                 credentials: "include",

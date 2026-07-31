@@ -68,10 +68,12 @@ app.post('/api/signup',async(req,res) =>{
 
         
     )
-            res.cookie("jwt",token,{
-                httpOnly : true,
-                 maxAge : 30*24*60*60*1000
-            })
+            res.cookie("jwt", token, {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none",
+    maxAge: 30 * 24 * 60 * 60 * 1000
+});
             res.status(201).json({
             message: "user created successfully",
             token
@@ -113,10 +115,12 @@ app.post('/api/login',async (req,res) =>{
 
      );
 
-     res.cookie("jwt",token,{
-        httpOnly : true,
-        maxAge : 30*24*60*60*1000
-     });
+    res.cookie("jwt", token, {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none",
+    maxAge: 30 * 24 * 60 * 60 * 1000
+});
      res.status(200).json({
         message : "login succesful"
      });
@@ -367,7 +371,10 @@ app.get('/api/orders/:orderid/products/:productid',protect,async(req,res) =>{
       }
 });
 app.post('/api/logout',(req,res) =>{
-    res.clearCookie("jwt");
+    res.clearCookie("jwt", {
+    secure: true,
+    sameSite: "none"
+});
     res.status(200).json({
         message : "logged out successfully"
     });

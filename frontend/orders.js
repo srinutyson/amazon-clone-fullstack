@@ -4,7 +4,7 @@ import { checkAuth } from "./auth.js";
 
 await checkAuth();
 const cart = await loadcart();
-const response = await fetch(`http://localhost:3069/api/orders`,
+const response = await fetch(`https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/orders`,
     {
       credentials: "include"
     });

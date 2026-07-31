@@ -300,8 +300,8 @@ app.post('/api/orders',protect,async(req,res) =>{
         await connection.query(`insert into order_items(order_id,product_id,quantity,deliveryoption)
             values(?,?,?,?)`,[orderid,item.product_id,item.quantity,item.deliveryoption]);
       }
-      await connection.query(`DELETE FROM CART
-                               WHERE USER_ID = ?`,[userid]);
+      await connection.query(`DELETE FROM cart
+                               WHERE user_id = ?`,[userid]);
      await connection.commit();
      res.status(201).json({
       orderId : orderid

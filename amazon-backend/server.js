@@ -12,7 +12,10 @@ const port   = process.env.PORT||3000;
 const app = express();
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://localhost:5500",
+    origin: [
+        "http://localhost:5500",
+        "https://amazon-clone-fullstack-theta.vercel.app"
+    ],
     credentials: true
 }));
 app.use(express.json());

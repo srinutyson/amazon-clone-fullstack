@@ -1,6 +1,6 @@
 import { getdeliveryoption } from "./data/deliveryoptions.js"; 
 import { cartcounter,loadcart } from "./data/cart.js";
-import { checkAuth } from "./auth.js";
+import { checkAuth } from "./scripts/auth.js";
 
 await checkAuth();
 const cart = await loadcart();

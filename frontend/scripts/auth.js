@@ -8,7 +8,8 @@ export async function checkAuth() {
     );
 
     if (!response.ok) {
-        window.location.href = "login.html";
+        // window.location.href = "login.html";
+        console.log("page no reload bro");
         return false;
     }
 

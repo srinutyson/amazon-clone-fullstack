@@ -117,13 +117,14 @@ app.post('/api/login',async (req,res) =>{
         }
 
      );
-
-    res.cookie("jwt", token, {
+res.cookie("jwt", token, {
     httpOnly: true,
     secure: true,
     sameSite: "none",
     maxAge: 30 * 24 * 60 * 60 * 1000
 });
+
+console.log("Set-Cookie sent");
      res.status(200).json({
         message : "login succesful"
      });

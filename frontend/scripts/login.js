@@ -27,8 +27,10 @@ async function login() {
         const data = await response.json();
 
         if (response.ok) {
-            window.location.href = "amazon.html";
-        } else {
+    console.log("LOGIN SUCCESS");
+    alert("LOGIN SUCCESS");
+    // window.location.href = "amazon.html";
+} else {
             document.getElementById("error-message").innerText = data.message;
         }
 

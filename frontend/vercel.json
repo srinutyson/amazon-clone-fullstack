@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/:path*"
+    }
+  ]
+}

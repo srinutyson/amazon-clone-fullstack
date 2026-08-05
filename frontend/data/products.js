@@ -1,12 +1,12 @@
 export async function loadProducts(search = '') {
     let response ;
 
-   if(!search)  response = await fetch('https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/products',
+   if(!search)  response = await fetch('/api/products',
     {
       credentials: "include"
     }
    );
-    else response = await fetch(`https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/products?search=${encodeURIComponent(search)}`,
+    else response = await fetch(`/api/products?search=${encodeURIComponent(search)}`,
     {
       credentials: "include"
     });

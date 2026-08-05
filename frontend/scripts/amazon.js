@@ -11,7 +11,7 @@ renderproducts(products);
 
 async function logout() {
   try {
-    const response = await fetch("https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/logout", {
+    const response = await fetch("/api/logout", {
       method: "POST",
       credentials: "include"
     });

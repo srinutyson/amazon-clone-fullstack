@@ -9,7 +9,7 @@ const params = new URLSearchParams(window.location.search);
 const orderid = params.get("orderid");
 const productid = params.get("productid");
 
-const response  = await fetch(`https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/orders/${orderid}/products/${productid}`,
+const response  = await fetch(`/api/orders/${orderid}/products/${productid}`,
     {
       credentials: "include"
     });

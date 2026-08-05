@@ -1,6 +1,6 @@
 export async function addtocart(prodname,quantity){
    
-    await fetch(`https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/cart`,{
+    await fetch(`/api/cart`,{
         credentials: "include",
         method : 'POST',
          headers: {
@@ -51,7 +51,7 @@ export async function addtocart(prodname,quantity){
     
 }
  export  async function updatedeliveryoption(prodname,deliveryoptionid){
-      await fetch(`https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/cart/${prodname}`,
+      await fetch(`/api/cart/${prodname}`,
         {
             credentials: "include",
             method : 'PATCH',
@@ -69,7 +69,7 @@ export async function addtocart(prodname,quantity){
 
   export async function loadcart(){
     let cartbag = [];
-    const response  = await fetch(`https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/cart`,{
+    const response  = await fetch(`/api/cart`,{
         credentials: "include",
     });
      cartbag = await response.json();
@@ -77,7 +77,7 @@ export async function addtocart(prodname,quantity){
 
   }
   export async function removefromcart(productid){
-          await fetch(`https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/cart/${productid}`, {
+          await fetch(`/api/cart/${productid}`, {
             credentials: "include",
     method: 'DELETE'
 });
@@ -85,7 +85,7 @@ export async function addtocart(prodname,quantity){
       return  await loadcart();
   }
 export async function updateitem(productid,c){
-       await fetch(`https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/cart/${productid}/quantity`,{
+       await fetch(`/api/cart/${productid}/quantity`,{
         credentials: "include",
         method : 'PATCH',
           headers: {
@@ -100,7 +100,7 @@ export async function updateitem(productid,c){
 }
 
 export async function placeorder(){
-     const response =   await fetch(`https://amazon-clone-fullstack-production-5e4c.up.railway.app/api/orders`,{
+     const response =   await fetch(`/api/orders`,{
         credentials: "include",
           method : 'POST'
        });
